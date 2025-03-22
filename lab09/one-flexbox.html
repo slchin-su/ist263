@@ -5,19 +5,23 @@
     <title>One Flexbox</title>
     <script src="https://kit.fontawesome.com/c6ef52ac8a.js" crossorigin="anonymous"></script>
     <style>
-        h2 {
-            font-size: 1 em;
-            color:#9557b6;}
+        h1 {
+            text-align:center;
+            margin-top:50px;}
+
+        h1, h2 {color:#9557b6;}
+
         body {
             font-family: Verdana, sans-serif;
             margin: 0;
             background-color: #c0d0d4; 
             color: #094d52;}
+
         #allskills {
             display: flex;
             justify-content: space-around;
-            margin: 100px 20px 20px 20px;
-            
+            margin: 20px;
+            border: 5px solid rgb(189, 76, 76);
         }
         #otherskills {
             flex-basis:25%;
@@ -29,9 +33,11 @@
             text-align: center;
             margin: 30px;
         }
+        div {border: 3px solid rgb(82, 82, 208);}
     </style>
 </head>
 <body>
+    <h1>One Flexbox Practice</h1>
     <main id="allskills">
         <div class="skill"> <br>
             <i class="fa-solid fa-bezier-curve fa-3x"></i>            
