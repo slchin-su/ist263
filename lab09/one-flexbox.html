@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>One Flexbox</title>
+    <script src="https://kit.fontawesome.com/c6ef52ac8a.js" crossorigin="anonymous"></script>
+    <style>
+        h2 {
+            font-size: 1 em;
+            color:#9557b6;}
+        body {
+            font-family: Verdana, sans-serif;
+            margin: 0;
+            background-color: #c0d0d4; 
+            color: #094d52;}
+        #allskills {
+            display: flex;
+            justify-content: space-around;
+            margin: 100px 20px 20px 20px;
+            
+        }
+        #otherskills {
+            flex-basis:25%;
+            background-color:#bfa8c9;
+            padding: 20px;
+            border-radius: 20px;
+        }
+        .skill {
+            text-align: center;
+            margin: 30px;
+        }
+    </style>
+</head>
+<body>
+    <main id="allskills">
+        <div class="skill"> <br>
+            <i class="fa-solid fa-bezier-curve fa-3x"></i>            
+            <p>Vector<br>Art</p>
+        </div>
+        <div class="skill"> <br>
+            <i class="fa-solid fa-palette fa-3x"></i>
+            <p>Poster<br>Design</p>
+        </div>
+        <div class="skill"> <br>
+            <i class="fa-solid fa-pencil fa-3x"></i>
+            <p>Technical<br>Drawing</p>
+        </div>
+        <div class="skill"> <br>
+            <i class="fa-solid fa-file-code fa-3x"></i>
+            <p>HTML</p>
+        </div>
+        <div class="skill"> <br>
+            <i class="fa-solid fa-comments fa-3x"></i>
+            <p>Communication</p>
+        </div>
+        <div id="otherskills">
+            <h2>Other Skills</h2>
+            <ul>
+                <li>Adobe Creative Suite</li>
+                <li>Excel</li>
+                <li>Painting</li>
+                <li>Cashiering</li>
+                <li>Writing</li>
+            </ul>
+        </div>
+    </main>
+</body>
+</html>
