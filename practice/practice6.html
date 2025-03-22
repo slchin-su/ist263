@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Practice 6</title>
+    <style>
+
+        p{
+            font-family:Arial, Helvetica, sans-serif;
+            color: teal;
+        }
+        #flexcontainer {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;}
+        .firstcontainer {
+            background-color: pink;
+            margin: 20px;
+            padding:20px;
+            border-radius:20px;
+        }
+        
+        h1 {
+            font-family: monospace;
+            color: purple;
+            font-size: 3em;
+        }
+
+        h2 {
+            font-family: monospace;
+            color: purple;
+            font-size: 2em;
+        }
+        #image1 {
+            background-color:pink;
+            order:3;
+            flex-basis:200%;
+            margin: 20px;
+            padding:20px;
+            border-radius: 20px;
+        }
+        #image2 {
+            background-color: rgb(144, 185, 197);
+            flex: 2;
+            margin: 20px;
+            padding:20px;
+            border-radius: 20px;
+            }
+        #image3 {
+            background-color: rgb(167, 227, 164);
+            margin: 20px;
+            padding:20px;
+            border-radius: 20px;
+        }
+        #floatimage {
+            float: left;
+            margin-right: 20px;
+        }
+        #clearfloat {
+            clear: both;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <h1>Basic Flex Container</h1>
+    <div id="flexcontainer">
+        <img src="../images/sandwich-1.png" class="firstcontainer">
+        <img src="../images/sandwich-2.png" class="firstcontainer">
+        <img src="../images/sandwich-3.png" class="firstcontainer">
+    </div>
+
+    <h1> Flex Container 2</h1>
+
+    <div id="flexcontainer">
+        <section id="image1">
+            <img src="../images/sandwich-1.png">
+            <p>caption</p>
+        </section>
+
+        <section id="image2">
+            <img src="../images/sandwich-2.png">
+            <p>caption</p>
+        </section>
+
+        <section id="image3">
+            <img src="../images/sandwich-3.png">
+            <p>caption</p>
+        </section>
+    </div>
+    
+    <h1>Practice for Float</h1>
+    <h2>2nd Image is in the p tag</h2>
+    <p>    
+        <img src="../images/sandwich-1.png" id="floatimage">
+        Lorem ipsum dolor sit amet, vim luptatum pericula splendide in, duo at prima soluta, petentium mnesarchum pri in. At tincidunt appellantur quo, ea nam amet duis reprehendunt, no sale rationibus pro. Euismod percipit eleifend te ius, paulo alienum et mel. Alii tibique ne quo, brute ridens ei vel, his ei nominavi expetendis voluptatum. Ex quo modo enim invenire. At perfecto liberavisse sea. Ei ceteros signiferumque mediocritatem duo.
+        <img src="../images/sandwich-2.png" id="clearfloat">
+    </p>
+    
+    <h1>Practice for Float 2</h1>
+    <h2> 2nd image is not in the p tag</h2>
+    <p>    
+        <img src="../images/sandwich-1.png" id="floatimage">
+        Lorem ipsum dolor sit amet, vim luptatum pericula splendide in, duo at prima soluta, petentium mnesarchum pri in. At tincidunt appellantur quo, ea nam amet duis reprehendunt, no sale rationibus pro. Euismod percipit eleifend te ius, paulo alienum et mel. Alii tibique ne quo, brute ridens ei vel, his ei nominavi expetendis voluptatum. Ex quo modo enim invenire. At perfecto liberavisse sea. Ei ceteros signiferumque mediocritatem duo.
+    </p>
+    <img src="../images/sandwich-2.png" id="clearfloat">
+
+
+</body>
+</html>

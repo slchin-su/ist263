@@ -12,6 +12,35 @@
             padding: 50px;
             margin: 20px;
         }
+        #container {
+            display:flex;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+        }
+        #image1 {
+            background-color:pink;
+            border-radius: 20px;
+            margin: 20px;
+            padding: 20px;
+            flex-basis: 50%;
+        }
+        #image2 {
+            background-color:rgb(192, 255, 213);
+            border-radius: 20px;
+            margin: 20px;
+            padding: 20px;
+            order: 1;
+            flex: 5
+        }
+        #image3 {
+            background-color:rgb(219, 169, 243);
+            border-radius: 20px;
+            margin: 20px;
+            padding: 20px;
+            flex: 3;
+        }
+
+
 
 
     </style>
@@ -20,5 +49,20 @@
     <p>
         Look at this <strong>BOLD</strong> word.
     </p>
+
+    <div id="container">
+        <article id="image1">
+            <img src="../images/sandwich-1.png">
+            <p>caption</p>
+        </article>
+        <article id="image2">
+            <img src="../images/sandwich-2.png">
+            <p>caption</p>
+        </article>
+        <article id="image3">
+            <img src="../images/sandwich-3.png">
+            <p>caption</p>
+        </article>
+    </div>
 </body>
 </html>

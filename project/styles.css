@@ -122,10 +122,12 @@ footer {
 #gallery {
     display:flex;
     margin: 20px 200px 20px 200px;
-    justify-content:space-between;
+    justify-content:center;
 }
 
 #topbanner {
     background-image: linear-gradient(#bed783, #f8f6f6);
     padding: 40px;
 }
+
+.sand {margin: 20px;}

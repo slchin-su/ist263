@@ -4,21 +4,70 @@
     <meta charset="utf-8">
     <title>CSS Practice 2</title>
     <style>
+        #givepadding {padding:100px;}
         strong {
             border: 3px solid #5cb793;
             border-radius: 10px;
             background-color: lightgrey;
             width: 300px;
             padding: 50px;
+            margin: 20px;}
+        #container-1 {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;}
+        #image1 {
+            background-color: rgb(142, 198, 142);
+            padding: 20px;
             margin: 20px;
-        }
+            border-radius: 10px}
+        #image2 {
+            background-color: rgb(155, 238, 238);
+            padding: 20px;
+            margin: 20px;
+            border-radius: 10px}
+        #image3 {
+            background-color: rgb(185, 152, 170);
+            padding: 20px;
+            margin: 20px;
+            border-radius: 10px}
+
+        #floating {
+            float: left;
+            margin-right:20px;}
+
+        #nofloat {float: right;}
+
+        #center{text-align: center;}
+        
 
 
     </style>
 </head>
 <body>
-    <p>
+    <p id="givepadding">
         Look at this <strong>BOLD</strong> word.
     </p>
+
+    <h1>Space-between</h1>
+    <div id="container-1">
+    <article id="image1">
+        <image  src="../images/sandwich-1.png">
+        <p>Words</p>
+    </article>
+    <article id="image2">
+        <image  src="../images/sandwich-2.png">
+        <p>Words</p>
+    </article>
+    <article id="image3">
+        <image  src="../images/sandwich-3.png">
+        <p>Words</p>
+    </article>
+    <p><img src="../images/sandwich-1.png" id="floating">
+    Lorem ipsum dolor sit amet, vim luptatum pericula splendide in, duo at prima soluta, petentium mnesarchum pri in. At tincidunt appellantur quo, ea nam amet duis reprehendunt, no sale rationibus pro. Euismod percipit eleifend te ius, paulo alienum et mel. Alii tibique ne quo, brute ridens ei vel, his ei nominavi expetendis voluptatum. Ex quo modo enim invenire. At perfecto liberavisse sea. Ei ceteros signiferumque mediocritatem duo.
+<img src="../images/sandwich-2.png" id="nofloat"></p>
+</div>
+
+<p id="center"> Hello </p>
 </body>
 </html>
