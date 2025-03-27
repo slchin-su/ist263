@@ -1,0 +1,94 @@
+body {
+    font-family: Verdana, sans-serif;
+    margin: 0;
+    background-color: #c0d0d4; 
+    color: #094d52;}
+.evenrow {background-color:#c3d4c3;}
+h1 {font-size: 3 em;}
+h2 {font-size: 2 em}
+p {margin: 20px;}
+
+a:link {color: #702381;}
+h1, h2 {color:#9557b6; padding-left: 20px;} /*#bd6262 #94275c  purple #b49ac3*/
+nav {background-color:#64ad9f; padding: 30px 10px 10px 10px; margin-bottom:30px;}
+.button:hover {
+    background-color:#84c6b9;
+    border-radius: 5px;}
+nav a {color:#7eb8ae;}
+footer {
+    background-color:#64ad9f;
+    padding-bottom: 100px;}
+hr {height: 1px; background-color: #509299; margin-top: 10 px}
+#button1 {margin-top: 10px; background-color:#e45555; border-color:#a1c6b3; color: white; font-family: Verdana, sans-serif}
+#quote {float: right;}
+.firstrow, .secondrow {
+    display: flex; 
+    background-color: #c6e2d3; 
+    border-radius: 1em;
+    margin: 20px;
+}
+.secondrow {
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.contact {padding-top: 20px;}
+.address, .contact, .form, .map {
+    padding: 10px; 
+    margin: 10px;
+}
+.form {order: 1;}
+.map {order: 2;} 
+
+#header {margin-left: 20 px;}
+#resize {width: 20 px;}
+input [type=text] {margin: 10 px 10 px;}
+.txt {margin: 20 px;}
+
+/*Lab 09 - Skills Page Flexboxes*/
+.skillstitle {
+    text-align: center;
+}
+#allskills {
+    display: flex;
+    margin-bottom: 20px;}
+
+#iconskills {
+    display:flex;
+    flex-basis:75%;
+    flex-wrap: wrap;
+    justify-content:space-between;}
+
+#otherskills {
+    flex-basis:25%;
+    background-color:#bfa8c9;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.skill {
+    text-align: center;
+    margin: 30px;}
+
+/*Lab 09 Extra Credit - I made a grid to align the paragraph with the icons, without deleting the flexboxes from before.*/
+#extracredit {
+    display: grid;
+    grid-template-columns: 75% 25%;
+    margin: 0px 50px 10px 50px;
+}
+
+#box1 {
+    padding: 5px 20px 5px 20px;}
+
+#box3 {
+    grid-column: span 2;
+}
+/*Lab 10 (but previously-made selectors added to during this lab are above)*/
+.topbanner {max-width: 100%;}
+@media only screen and (max-width: 800px) {
+    nav a {
+        width: 100%;
+        display: block;
+        margin: 10px 0px 10px 0px;
+    }
+    span {display: none;}
+}
