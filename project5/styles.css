@@ -1,0 +1,163 @@
+body {
+    background-color: #f8f6f6;
+    color:#8F5528;
+    font-family: Verdana, sans-serif;
+    padding: 0;
+    margin: 0;}
+h1, h2 {color:#8F5528;}
+
+
+
+/* Navigation Header*/
+nav {
+    background-color: #cfe8e8;
+    padding: 30px 10px 0px 10px;
+    box-shadow: 0 6px 5px -5px #3b656c;
+}
+
+.location { /* "Order Today" button*/
+    margin-top: 50px; margin-bottom: 50px;
+    border-radius: 10px;
+    background-color: #E97D4E;
+    padding: 10px;
+    color:#FFF5CB;}
+
+    /* Might not need bottom margin if fix cart png */
+
+a { /*border: 3px solid #5cb793;    BORDER*/
+    text-decoration: none;
+    color: #8F5528;}
+
+.logo {
+     /*border: 3px solid red;   BORDER*/
+    margin-bottom: 50px;
+    margin-left: 20px;}
+
+.fullnav {display: flex;
+    /* border: 3px solid #5cb793;   BORDER*/
+    justify-content: flex-end;}
+
+#cart {
+    height: 40%;
+    margin-left: 20px;
+} /*FIX this shopping cart */
+
+.index {
+    margin-left: auto; /*Logo goes left*/
+    margin-top: 50px; margin-bottom: 50px; /*Home moves down*/
+    padding: 10px;} 
+.aboutus {
+    margin: 50px 20px 50px 20px;/*About Us moves down*/
+    padding: 10px;}
+
+.shoppingcart {margin-top: 50px;/*moves down BUT puts huge space on buttom :(*/}
+
+a:hover {color: #b1815c;}
+#orderbutton a:hover {background-color: red; color: blue;} /* hover for button doesn't work*/
+/*End Navigation*/
+
+
+/*Footer*/
+footer {
+    background-color: #cfe8e8;
+    box-shadow: 0 -1px 4px 1px #6d8b91;}
+.footernav {
+    padding: 20px 20px 20px 40px;}
+.fullfooter {display:flex;}
+#socials {
+    margin-left: auto;
+    padding: 20px 40px 20px 20px;}
+
+/*Add more space between "Home" and "About Us"*/
+
+#copyright {
+    margin: 75px 0px 0px 0px;}
+/*End Footer*/
+
+
+/*Home Page*/
+
+#bannerheader {
+    text-align: right;
+    font-size: 4em;
+    font-family: Fjalla One;
+    margin-right: 300px;}
+
+#locationsbutton {
+    float: right;
+    border-radius: 10px;
+    margin-right: 300px;
+    border: none;
+    color:#FFF5CB;
+    background-color: #E97D4E;
+    padding: 15px 32px;
+    font-size: 16px;
+    cursor: pointer;}
+
+#branddescription {margin: 0px 700px 60px 40px}
+.homeheader {
+    margin-left: 100px;
+    font-family: Fjalla One;
+    font-size: 2em;}
+#promotion1 {
+    display:flex;
+    margin: 0px 100px 40px 100px;}
+#promotion2 {
+    display:flex;
+    margin: 0px 100px 40px 100px;}
+
+.description {padding: 50px}
+
+.redeem {
+    float: right;
+    border-radius: 10px;
+    margin-right: 300px;
+    border: none;
+    color:#FFF5CB;
+    background-color: #C2C774;
+    padding: 15px 32px;
+    font-size: 16px;
+    cursor: pointer;}
+
+#gallery {
+    display:flex;
+    margin: 20px 200px 20px 200px;
+    justify-content:center;
+}
+
+#topbanner {
+    background-image: linear-gradient(#bed783, #f8f6f6);
+    padding: 40px;
+}
+
+.sand {margin: 20px;}
+
+/*About Page*/
+.basicmargins {padding:40px;}
+
+/*Order Page*/
+
+#allingredients {
+    display: flex;
+    flex-wrap: wrap;
+}
+.ingredientbutton {
+    display: flex;
+    justify-content: space-between;
+}
+.ingredientname {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.ingredientheading {text-align:center;}
+.ingredientsection {
+    margin: 20px;
+}
+/*Order Page*/
+#location{
+    display: flex;
+}
+#mapright {padding: 20px;}
+
+/*Order Placed Page*/
+#placedtext {text-align: center;}
