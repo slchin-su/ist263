@@ -9,10 +9,12 @@
     <script>
         function WinnerMessage () {
             document.getElementById("messages").innerHTML = 'You Won!' ;
+            document.getElementById("messages").style.display = 'block'
         }
 
         function TryAgain () {
             document.getElementById("messages").innerHTML = 'Wrong Shell - Try Again';
+            document.getElementById("messages").style.display = 'block'
         }
         function ShuffleShells() {
             let shellOrder = [1, 2, 3].sort(function() {
@@ -24,13 +26,13 @@
             document.getElementById("third").style.order = shellOrder[2]
         }
         
-        function NoBoxColor () {
-            document.getElementById("messages").style.display = 'none';
-        }
+        // function NoBoxColor () {
+        //     document.getElementById("messages").style.display = 'none';
+        // }
 
-        function BoxColor () {
-            document.getElementById("messages").style.display = 'block';
-        }
+        // function BoxColor () {
+        //     document.getElementById("messages").style.display = 'block';
+        // }
     </script>
 
     <style>
@@ -50,6 +52,7 @@
             font-family:Verdana, Geneva, Tahoma, sans-serif;
         }
         #messages {
+            display: none;
             text-align: center;
             width: 30%;
             justify-content: center;
