@@ -5,11 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lab 11</title>
-    <link rel="stylesheet" href="../styles/animate.css">
+    <link rel="stylesheet" href="animate2.css">
     <script>
         function WinnerMessage () {
             document.getElementById("messages").innerHTML = 'You Won!' ;
         }
+
         function TryAgain () {
             document.getElementById("messages").innerHTML = 'Wrong Shell - Try Again';
         }
@@ -21,6 +22,14 @@
             document.getElementById("first").style.order = shellOrder[0]
             document.getElementById("second").style.order = shellOrder[1]
             document.getElementById("third").style.order = shellOrder[2]
+        }
+        
+        function NoBoxColor () {
+            document.getElementById("messages").style.display = 'none';
+        }
+
+        function BoxColor () {
+            document.getElementById("messages").style.display = 'block';
         }
     </script>
 
@@ -60,7 +69,7 @@
         <img src="../images/walnut.png" id="second" alt="second walnut" class="second" onclick="TryAgain();">
         <img src="../images/walnut.png" id="third" alt="third walnut" class="third" onclick="TryAgain();">
     </div>
-    <div id="messages">
+    <div id="messages" onload="NoBoxColor" onclick="BoxColor"></div>
 
 </div>
 </body>
