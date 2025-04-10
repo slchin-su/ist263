@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Week 12</title>
+    <script>
+        function makeOrange () {
+          document.getElementById("orange").style.color = 'orange'
+          document.getElementById("orange").style.backgroundColor = 'rgb(42, 90, 150)'
+          document.getElementById("orange").innerHTML = 'Orange Nation'  
+        }
+    </script>
+    <style>
+        body {
+            background-color: rgb(250, 238, 191)
+            
+        }
+        #orange {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            background-color: white;
+            text-align: center;
+            margin: 40px;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        #orange:hover {
+            background-color: rgb(167, 165, 165);
+        }
+    </style>
+</head>
+<body>
+    <div id="orange" onclick ="makeOrange();" offclick ="undoOrange();">
+        <label>Syracuse University</label>
+    </div>
+</body>
+</html>
