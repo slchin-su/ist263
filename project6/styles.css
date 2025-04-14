@@ -20,7 +20,7 @@ nav {
 .location { /* "Order Today" button*/
     margin-top: 50px; margin-bottom: 50px;
     border-radius: 10px;
-    background-color: #e64c26; /*#E97D4E*/; 
+    background-color: #aa2200; /*#E97D4E*/; 
     padding: 10px;
     color:#FFF5CB;}
 
@@ -94,7 +94,7 @@ footer {
     margin-right: 300px;
     border: none;
     color:#FFF5CB;
-    background-color: #e64c26;
+    background-color: #aa2200;
     padding: 15px 32px;
     font-size: 16px;
     cursor: pointer;}
@@ -105,7 +105,7 @@ footer {
     margin-right: 300px;
     border: none;
     color:#FFF5CB;
-    background-color: #e64c26;
+    background-color: #aa2200;
     padding: 15px 32px;
     font-size: 16px;
     cursor: pointer;}
@@ -130,7 +130,7 @@ footer {
     margin-right: 300px;
     border: none;
     color:#FFF5CB;
-    background-color: #9aa138;
+    background-color: #777e1d;
     /* #C2C774 */
     padding: 15px 32px;
     font-size: 16px;
@@ -203,7 +203,7 @@ footer {
             border-radius: 10px;
             border: none;
             color:#FFF5CB;
-            background-color: #e64c26;;
+            background-color: #aa2200;;
             cursor: pointer;
             padding: 5px;}
         
@@ -223,7 +223,7 @@ footer {
                 margin: 20px 20px 20px 300px;
                 border: none;
                 color:#FFF5CB;
-                background-color: #e64c26;
+                background-color: #aa2200;
                 padding: 15px 32px;
                 font-size: 16px;
                 cursor: pointer;}
