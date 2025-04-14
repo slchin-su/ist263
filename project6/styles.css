@@ -4,8 +4,9 @@ body {
     font-family: Verdana, sans-serif;
     padding: 0;
     margin: 0;}
-    
-h1, h2 {color:#8F5528;}
+h1, h2 {
+    color:#8F5528;
+    font-family: "Fjalla One";}
 
 
 
@@ -34,7 +35,8 @@ a { /*border: 3px solid #5cb793;    BORDER*/
     margin-bottom: 50px;
     margin-left: 20px;}
 
-.fullnav {display: flex;
+.fullnav {
+    display: flex;
     /* border: 3px solid #5cb793;   BORDER*/
     justify-content: flex-end;}
 
@@ -162,3 +164,62 @@ footer {
 
 /*Order Placed Page*/
 #placedtext {text-align: center;}
+
+/*Responsive Web Design*/
+#mobilenav {display: none;}
+#descriptionalt {display: none;}
+
+
+@media only screen and (max-width: 800px) {
+    /* Navigation */
+    .fullnav {display:none;}
+    #mobilenav {
+        display: grid;
+        grid-template-columns: 20% 40% 40%;
+    }
+    #smallnav {
+        display: grid;
+        margin: 10px;
+        grid-template-rows: 30% 30% 36%;
+        }
+    .smalllogo {text-align: left;}
+    .smallcart {text-align: right;}
+    .smalllocation {     
+        border-radius: 10px;
+        border: none;
+        color:#FFF5CB;
+        background-color: #E97D4E;
+        cursor: pointer;
+        padding: 5px;}
+    
+    .homeheader {
+        margin-left: 30px;
+        margin-top: 90px;
+        font-size: 3em;
+        text-align:center;}
+    /*Banner*/
+        #branddescription {margin: 0px}
+        #bannerheader{
+            margin: 0px;}
+
+    /*Promotions*/
+    #promotion1 {
+        display:block;
+        margin: 30px;}
+    #promotion2 {
+        display:block;
+        margin: 30px;}
+    .description {padding: 10px}
+    .redeem {
+        float: left;}
+    #description2 {display: none;}
+    #descriptionalt {display:block;}
+    .shadowbox {margin-top: 20px;}
+    #gallery {
+        display:block;
+        margin: 20px;
+    }
+   
+
+
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Sarah Chin - Bio</title>
+    <script>
+        function mobileMenu() {
+            document.getElementsById('fullnav').style.display = 'block'
+        }
+    </script>
+    <script src="https://kit.fontawesome.com/c6ef52ac8a.js" crossorigin="anonymous"></script>
+
+    <style>
+        /* #fullnav {display: none;} */
+        #mobilenav {
+            display: grid;
+            grid-template-columns: 20% 40% 40%;
+            padding: 10px;
+        }
+        #smallnav {
+            display: grid;
+            }
+        .smalllogo {text-align: left;}
+        .smallcart {text-align: right;}
+
+
+    </style>
+</head>
+<body>
+    <nav id="mobilenav">
+        <div id="smallnav">
+            <a href="index.html" class="index">Home</a>
+            <a href="about_us.html" class="aboutus">About Us</a>
+            <a href="location.html" class= "location" id="orderbutton">Order Today</a>    
+        </div>
+            <a href="index.html"><img class=smalllogo src="../images/logo-sized.png" alt="Linkedin Logo"></a>
+            <a href="cart.html" class="smallcart"><img src="../images/cart1.png" alt="shopping cart" id="cart"></a>
+       
+        </div>
+        </nav>
+
+    <!-- <i class="fa fa-bars fa-2x" id="hamburger" onclick="mobileMenu()"></i>
+    <p onclick="mobileMenu()">HELP!</p>
+    <p id="fullnav">hello</p> -->
+</body>
+</html>
