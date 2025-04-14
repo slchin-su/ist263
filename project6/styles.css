@@ -55,7 +55,9 @@ a { /*border: 3px solid #5cb793;    BORDER*/
 
 .shoppingcart {margin-top: 50px;/*moves down BUT puts huge space on buttom :(*/}
 
-a:hover {color: #b1815c;}
+a:hover {
+    background-color: #8cbcc7;
+    border-radius: 10px;}
 #orderbutton a:hover {background-color: red; color: blue;} /* hover for button doesn't work*/
 /*End Navigation*/
 
@@ -96,6 +98,9 @@ footer {
     padding: 15px 32px;
     font-size: 16px;
     cursor: pointer;}
+#locationsbutton:hover {
+        color:#FFF5CB;
+        background-color: #eb6442;}
 .locationsbutton2 {
     float: right;
     border-radius: 10px;
