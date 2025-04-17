@@ -12,17 +12,17 @@ p {
     font-size: 1em;}
 
 a:link {color: #702381;}
-h1, h2, h3 {color:#9557b6; padding-left: 20px;} /*#bd6262 #94275c  purple #b49ac3*/
-nav {background-color:#64ad9f; padding: 30px 10px 10px 10px; margin-bottom:30px;}
+h1, h2 {color:#9557b6; padding-left: 20px;} /*#bd6262 #94275c  purple #b49ac3*/
+nav {background-color:#C1F5F0; padding: 30px 10px 10px 10px; margin-bottom:30px;}
 .button:hover {
     background-color:#84c6b9;
     border-radius: 5px;}
 nav a {color:#7eb8ae;}
 footer {
-    background-color:#64ad9f;
+    background-color:#C1F5F0;
     padding-bottom: 100px;}
 hr {height: 1px; background-color: #509299; margin-top: 10 px}
-#button1 {margin-top: 10px; background-color:#e45555; border-color:#a1c6b3; color: white; font-family: Verdana, sans-serif}
+#button1 {margin-top: 10px; background-color:#74199F; border-color:#a1c6b3; color: white; font-family: Verdana, sans-serif}
 #quote {float: right;}
 .firstrow, .secondrow {
     display: flex; 
@@ -67,7 +67,7 @@ input [type=text] {margin: 10 px 10 px;}
 
 #otherskills {
     flex-basis:25%;
-    background-color:#bfa8c9;
+    background-color:#EED8F8;
     padding: 20px;
     border-radius: 20px;
 }
@@ -107,3 +107,4 @@ input [type=text] {margin: 10 px 10 px;}
     padding: 10px;
     text-decoration:none;
 }
+/* #skillstext {color: #4D2B5F;} */
