@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#main" class="skip" id="maincontent">Skip to main content</a>
+            <p>
+            <a href="index.html" class="button">Home</a> <span>|</span>
+            <a href="skills.html" class="button">Skills</a> <span>|</span>
+            <a href="contact.html" class="button">Contact</a>
+            </p>
+        </nav>
+    </header>
+    <main id="main">
+        <h1 id="header">Contact</h1>
+        <div class="firstrow">
+            <div class="address">
+            <h2>Address</h2>
+            <p>Sarah Chin
+                <br>1000 Irving Ave
+                <br>Syracuse, NY 13210
+            </p>
+            </div>
+
+            <div class="contact">
+            <p><a href="mailto:slchin@syr.edu">slchin@syr.edu</a></p>
+            <p><a href="https://www.linkedin.com/in/sarah-chin-designer/" target="_blank"><img id=resize src="../images/logo-sized.png" alt="Linkedin Logo">My LinkedIn Profile</a></p>
+            </div>
+        </div>
+
+        <div class="secondrow">
+            <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2916.2854294787453!2d-76.1413502236731!3d43.03542567113828!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d9f39bf1920b7b%3A0x9d0202ffc9271c02!2sSadler%20Hall%2C%201000%20Irving%20Ave%2C%20Syracuse%2C%20NY%2013210!5e0!3m2!1sen!2sus!4v1738283190816!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+            <div class="form">
+            <form action="https://formspree.io/f/xrbelqop" method="post">
+            <h2>Contact Form</h2>
+                <label for="fname">First Name:</label>
+                <input type="text" id="fname" name="fname"><br>
+
+                <label for="phonenumber">Phone Number:</label>
+                <input type="text" id="phonenumber" name="phonenumber"><br>
+
+                <label for="email">Email:</label>
+                <input type="text" id="email" name="email"><br>
+
+            <h3>Please select your age</h3>
+                <input type="radio" id="age1" name="age" value="0-17">
+                <label for="age1">0-17</label><br>
+
+                <input type="radio" id="age2" name="age" value="18-24">
+                <label for="age2">18-24</label><br>
+
+                <input type="radio" id="age3" name="age" value="25-34">
+                <label for="age3">25-34</label><br>
+
+                <input type="radio" id="age4" name="age" value="35-44">
+                <label for="age4">35-44</label><br>
+
+                <input type="radio" id="age5" name="age" value="55-64">
+                <label for="age5">55-64</label><br>
+
+                <input type="radio" id="age6" name="age" value="65-100">
+                <label for="age6">65-100</label><br>
+
+            <h3>How would you like to be contacted back?</h3>
+                <input type="checkbox" id="contact1" name="contact" Value="Email">
+                <label for="contact1">Email</label><br>
+
+                <input type="checkbox" id="contact2" name="contact" Value="Phone">
+                <label for="contact2">Phone</label>
+
+            <h3>What is your reason for contacting?</h3>
+            <label for="comments">Comments:</label><br>
+            <textarea id="comments" name="comments" rows="4" cols="30"
+            placeholder="type here..."
+            style="max-width: 100%;"></textarea><br>
+
+            <input id=button1 type="submit" value="Send Form">
+            </form>
+        </div>
+        </div>
+    </main>
+
+    <footer>
+        <hr>
+        <p>
+            &copy;2025 
+            <i id="quote">You'll never know if you never try</i>
+        </p>
+    </footer>
+</body>
+</html>
