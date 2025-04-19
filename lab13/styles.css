@@ -1,9 +1,9 @@
 body {
     font-family: Verdana, sans-serif;
     margin: 0;
-    background-color: #c0d0d4; 
-    color: #094d52;}
-.evenrow {background-color:#c3d4c3;}
+    background-color: #dee4e6; 
+    color: #103C65;}
+.evenrow {background-color:#12f312;}
 h1 {font-size: 3em;}
 h2 {font-size: 2em}
 h3 {font-size: 1em;}
@@ -11,24 +11,29 @@ p {
     margin: 20px;
     font-size: 1em;}
 
-a:link {color: #702381;}
-h1, h2 {color:#9557b6; padding-left: 20px;} /*#bd6262 #94275c  purple #b49ac3*/
-nav {background-color:#C1F5F0; padding: 30px 10px 10px 10px; margin-bottom:30px;}
+a:link {color: #531B5F;}
+h1, h2 {
+    color:#103C65; 
+    padding-left: 20px;} /*#bd6262 #94275c  purple #b49ac3*/
+h1 {text-shadow:2px 3px #7eb8ae;}
+
+    nav {background-color:#A3DAE1; padding: 30px 10px 10px 10px; margin-bottom:30px;}
 .button:hover {
-    background-color:#84c6b9;
+    background-color:#5ad7e8;
     border-radius: 5px;}
 nav a {color:#7eb8ae;}
 footer {
-    background-color:#C1F5F0;
+    background-color:#A3DAE1;
     padding-bottom: 100px;}
-hr {height: 1px; background-color: #509299; margin-top: 10 px}
-#button1 {margin-top: 10px; background-color:#74199F; border-color:#a1c6b3; color: white; font-family: Verdana, sans-serif}
+hr {height: 1px; background-color: #5faeb7; margin-top: 10 px}
+#button1 {margin-top: 10px; background-color:#073E5A; border-color:#a1c6b3; color: white; font-family: Verdana, sans-serif}
 #quote {float: right;}
 .firstrow, .secondrow {
     display: flex; 
-    background-color: #c6e2d3; 
+    background-color: #B7D7D2; 
     border-radius: 1em;
     margin: 20px;
+    box-shadow: 3px 3px 3px rgb(48, 101, 106);
 }
 .secondrow {
     justify-content: space-around;
@@ -67,7 +72,7 @@ input [type=text] {margin: 10 px 10 px;}
 
 #otherskills {
     flex-basis:25%;
-    background-color:#EED8F8;
+    background-color:#103C65;
     padding: 20px;
     border-radius: 20px;
 }
@@ -75,6 +80,8 @@ input [type=text] {margin: 10 px 10 px;}
 .skill {
     text-align: center;
     margin: 30px;}
+
+.skillstext {color: #CDF4D3;}
 
 /*Lab 09 Extra Credit - I made a grid to align the paragraph with the icons, without deleting the flexboxes from before.*/
 #extracredit {
@@ -102,9 +109,10 @@ input [type=text] {margin: 10 px 10 px;}
 #comments {max-width: 90%;}
 /* Lab 13 */
 #maincontent {
-    background-color:#a1c6c3;
+    background-color:#103C65;
     border-radius: 10px;
     padding: 10px;
     text-decoration:none;
+    color: #dee4e6;
 }
 /* #skillstext {color: #4D2B5F;} */
