@@ -24,6 +24,9 @@ nav {
     padding: 10px;
     color:#FFF5CB;}
 
+.location:hover {
+    background-color: #7d240e;}
+
     /* Might not need bottom margin if fix cart png */
 
 a { /*border: 3px solid #5cb793;    BORDER*/
@@ -31,8 +34,15 @@ a { /*border: 3px solid #5cb793;    BORDER*/
     color: #8F5528;}
 
 .logo {
+    padding-left: 20px;
+    padding-top: 20px;
+    width: 100px;
      /*border: 3px solid red;   BORDER*/
-    margin-bottom: 50px;
+  }
+
+  #companyname {
+    font-family: "Grand Hotel", cursive;
+    font-size: 3em;
     margin-left: 20px;}
 
 .fullnav {
@@ -58,7 +68,6 @@ a { /*border: 3px solid #5cb793;    BORDER*/
 /* a:hover {
     background-color: #598893;
     border-radius: 10px;} */
-#orderbutton a:hover {background-color: red; color: blue;} /* hover for button doesn't work*/
 /*End Navigation*/
 
 
@@ -88,18 +97,10 @@ footer {
     font-family: Fjalla One;
     margin-right: 300px;}
 
-#locationsbutton {
-    float: right;
-    border-radius: 10px;
-    margin-right: 300px;
-    border: none;
-    color:#FFF5CB;
-    background-color: #aa2200;
-    padding: 15px 32px;
-    font-size: 16px;
-    cursor: pointer;}
+.allbuttons:hover {
+    background-color: #7d240e;}
 
-.locationsbutton2 {
+.allbuttons {
     float: right;
     border-radius: 10px;
     margin-right: 300px;
@@ -114,27 +115,26 @@ footer {
 .homeheader {
     margin-left: 100px;
     font-family: Fjalla One;
-    font-size: 2em;}
+    font-size: 3em;}
+#gallery {
+    text-align:center;
+    margin-top: 50px;}
 #promotion1 {
     display:flex;
-    margin: 0px 100px 40px 100px;}
+    flex: wrap;
+    margin: 0px 100px 40px 100px;
+    padding-right: 100px;}
 #promotion2 {
     display:flex;
+    flex: wrap;
     margin: 0px 100px 40px 100px;}
+.promotionstyle {
+    border-radius: 20px;
+    box-shadow: 0 6px 5px -5px #3b656c
+}
 
-.description {padding: 50px}
-
-.redeem {
-    float: right;
-    border-radius: 10px;
-    margin-right: 300px;
-    border: none;
-    color:#FFF5CB;
-    background-color: #646c15;
-    /* #C2C774 */
-    padding: 15px 32px;
-    font-size: 16px;
-    cursor: pointer;}
+#description1 {padding: 50px 0px 50px 50px;}
+#description2 {padding: 50px 50px 50px 0px}
 
 #gallery {
     display:flex;
@@ -212,6 +212,10 @@ footer {
             margin-top: 90px;
             font-size: 3em;
             text-align:center;}
+        #companyname {
+            font-family: "Fjalla One";
+            font-size: 2em;
+            margin-left: 20px;}
         /*Banner*/
             #branddescription {margin: 0px}
             #bannerheader{
@@ -236,7 +240,7 @@ footer {
             display:block;
             margin: 30px;}
         .description {padding: 10px}
-        .redeem {
+        #redeem {
             float: left;}
         #description2 {display: none;}
         #descriptionalt {display:block;}

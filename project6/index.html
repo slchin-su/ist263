@@ -6,15 +6,18 @@
     <title>Home</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Grand Hotel' rel='stylesheet'>
     <script src="https://kit.fontawesome.com/c6ef52ac8a.js" crossorigin="anonymous"></script>
     <script src="project.js"></script>
+    <link rel="icon" href="../images/company-favicon.ico">
 
 </head>
 <body>
     <header>
         <nav>
         <div class="fullnav">
-            <a href="index.html"><img class=logo src="../images/logo-sized.png" alt="Linkedin Logo"></a>
+            <a href="index.html"><img class=logo src="../images/crafted-cravings-logo.png" alt="Crafted Cravings Logo"></a>
+            <p id="companyname">Crafted Cravings</p>
             <a href="index.html" class="index">Home</a>
             <a href="about_us.html" class="aboutus">About Us</a>
             <a href="location.html" class= "location" id="orderbutton">Order Today</a>
@@ -28,7 +31,7 @@
                 <a href="about_us.html" class="smallaboutus">About Us</a>
                 <a href="location.html" class= "smalllocation">Order Today</a>    
             </div>
-                <a href="index.html"><img class=smalllogo src="../images/logo-sized.png" alt="Linkedin Logo"></a>
+                <img class=logo src="../images/crafted-cravings-logo.png" alt="Crafted Cravings Logo"></a>
                 <a href="cart.html" class="smallcart"><img src="../images/cart1.png" alt="shopping cart"></a>
         </nav>
     </header>
@@ -38,33 +41,33 @@
     <!--<button id="locationsbutton">
         <a href="location.html">Locations Near You</a>
     </button> -->
-    <a href="location.html" class="locationsbutton2">Locations Near You</a>
+    <a href="location.html" class="allbuttons">Locations Near You</a>
     <p id="branddescription">At Crafted Cravings, we are adamant about giving the customers the freedom to build their own delicious custom sandwiches. Choose from a variety of meats, cheeses, vegetables, and breads to create the ideal sandwich for your personal tastes. Our sandwich artisans ensure that each sandwich is assembled to perfection, and we guarantee that you'll love every bite!</p>
 </div>
     <h1 class="homeheader">Promotions</h1>
 <div id="promotion1">
-    <img class=shadowbox src="../images/placeholder.png" alt="Promotion 1"> <!--add shadow-->
-    <article class="description">
-        <h2>Promotion Title</h2>
-        <p>Promotion Description</p>
-        <button class="redeem">Redeem</button>
+    <img class=shadowbox src="../images/promotion1.jpg" class=promotionstyle alt="Promotion 1"> <!--add shadow-->
+    <article class="description" id="description1" >
+        <h2>Family Deal</h2>
+        <p>If you purchase 4 sandwiches, you will only need to pay $40!</p>
+        <button class="allbuttons">Redeem</button>
     </article>
 </div>
 <div id="promotion2">
     <article class="description" id="description2">
-        <h2>Promotion Title</h2>
-        <p>Promotion Description</p>
-        <button class="redeem">Redeem</button>
+        <h2>Family Deal</h2>
+        <p>If you purchase 4 sandwiches, you will only need to pay $40!</p>
+        <button class="allbuttons" id="redeem">Redeem</button>
     </article>
-    <img class=shadowbox src="../images/placeholder.png" alt="Promotion 2">
+    <img class=shadowbox src="../images/promotion2.jpg" alt="Promotion 2">
     <article class="description" id="descriptionalt">
-        <h2>Promotion Title</h2>
-        <p>Promotion Description</p>
-        <button class="redeem">Redeem</button>
+        <h2>Family Deal</h2>
+        <p>If you purchase 4 sandwiches, you will only need to pay $40! </p>
+        <button class="allbuttons" id="redeem">Redeem</button>
     </article>
 </div>
 
-<h1 class="homeheader">Food Gallery</h1>
+<h1 class="homeheader" id="gallery">Food Gallery</h1>
 <div id="gallery">
     <img src="../images/sandwich-1.png" alt="Sandwich 1" class="sand">
     <img src="../images/sandwich-2.png" alt="Sandwich 2" class="sand">
