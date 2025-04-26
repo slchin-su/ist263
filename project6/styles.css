@@ -8,8 +8,6 @@ h1, h2 {
     color:#8F5528;
     font-family: "Fjalla One";}
 
-
-
 /* Navigation Header*/
 nav {
     background-color: #cfe8e8;
@@ -111,12 +109,14 @@ footer {
     font-size: 16px;
     cursor: pointer;}
 
-#branddescription {margin: 0px 700px 60px 40px}
+#branddescription {
+    margin: 0px 700px 60px 40px;
+    min-width: 500px;}
 .homeheader {
     margin-left: 100px;
     font-family: Fjalla One;
     font-size: 3em;}
-#gallery {
+#galleryheader {
     text-align:center;
     margin-top: 50px;}
 #promotion1 {
@@ -184,21 +184,40 @@ footer {
 #descriptionalt {display: none;}
 
 
+/* Phones */
 @media only screen and (max-width: 800px) {
+    body {width: 100%;}
+
     /* Home Page */
         /* Navigation */
+        nav {
+            background-color: #cfe8e8;
+            padding: 10px;
+            box-shadow: 0 6px 5px -5px #3b656c;
+        }
+
         .fullnav {display:none;}
         #mobilenav {
-            display: grid;
-            grid-template-columns: 20% 40% 40%;
+            display: flex;
         }
+        .homeheader {
+            padding: none;
+            margin: none;}
         #smallnav {
             display: grid;
             margin: 10px;
-            grid-template-rows: 30% 30% 36%;
             }
-        .smalllogo {text-align: left;}
-        .smallcart {text-align: right;}
+        .smalllogo {
+            display: none;}
+        .smallcart {
+            text-align: right;
+
+        }
+        
+        #companyname {
+            font-family: "Fjalla One";
+            font-size: 2em;
+            margin-left: 20px;}
         .smalllocation {     
             border-radius: 10px;
             border: none;
@@ -206,49 +225,99 @@ footer {
             background-color: #aa2200;;
             cursor: pointer;
             padding: 5px;}
-        
-        .homeheader {
-            margin-left: 30px;
-            margin-top: 90px;
-            font-size: 3em;
-            text-align:center;}
-        #companyname {
-            font-family: "Fjalla One";
-            font-size: 2em;
-            margin-left: 20px;}
+
+        /* Footer */
+        .footernav {
+            padding: 10px;}
+        .fullfooter {display:flex;}
+        #socials {
+            margin-left: auto;
+            padding: 10px;}
+
         /*Banner*/
-            #branddescription {margin: 0px}
-            #bannerheader{
-                margin: 0px;}
+            #topbanner {
+                display: block;}
+            #branddescription {
+                margin: 0px;
+                min-width: 80%;
+                display: block;}
+
             .locationsbutton2 {
                 display: block;
                 float: none;
                 border-radius: 10px;
-                margin: 20px 20px 20px 300px;
                 border: none;
                 color:#FFF5CB;
                 background-color: #aa2200;
                 padding: 15px 32px;
                 font-size: 16px;
                 cursor: pointer;}
+            span {display: none;}
+            #bannerheader {
+
+                text-align: left;
+                font-size: 2em;
+                margin: 0px 0px 20px 0px;}
+            #branddescription {
+                margin-top: 20px;
+                width: 90%;}
 
         /*Promotions*/
+        .description {padding: 10px}
         #promotion1 {
             display:block;
-            margin: 30px;}
+            margin: 30px;
+            padding-right: 0px;
+            margin: 40px;}
         #promotion2 {
             display:block;
             margin: 30px;}
-        .description {padding: 10px}
+        #description1 {
+            padding: 0px;
+            width: 100%;
+            }
+        .allbuttons {
+            max-width: 50%;
+            display: block;
+            float: none;
+            border-radius: 10px;
+            margin-right: 0px;
+            border: none;
+            color:#FFF5CB;
+            background-color: #aa2200;
+            padding: 15px;
+            font-size: 16px;
+            cursor: pointer;}
+
+        #description2 {display: none;}
+        #descriptionalt {
+            display:block;
+            width: 90%;
+            margin-bottom: 100px;}
+        .shadowbox {display: none;}
         #redeem {
             float: left;}
-        #description2 {display: none;}
-        #descriptionalt {display:block;}
-        .shadowbox {margin-top: 20px;}
-        #gallery {
-            display:block;
-            margin: 20px;
+        
+        /* Gallery */
+        .homeheader {
+            margin-left: 20px;
+            text-align: left;
+            font-size: 2em;
+            
         }
+        #galleryheader {
+            text-align: left;
+        }
+        #gallery {
+            display: block;
+            margin: 20px;
+            margin-left: 10px;
+            
+        }
+        .sand {
+            width: 90%;
+            margin: none;
+            padding: none;}
    
 
 
