@@ -208,9 +208,11 @@ footer {
             margin: 10px;
             }
         .smalllogo {
-            display: none;}
+            width: 10%;
+            }
         .smallcart {
-            text-align: right;
+            float: right;
+            width: 20%;
 
         }
         
