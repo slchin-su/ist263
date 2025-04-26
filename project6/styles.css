@@ -48,7 +48,7 @@ a { /*border: 3px solid #5cb793;    BORDER*/
     /* border: 3px solid #5cb793;   BORDER*/
     justify-content: flex-end;}
 
-#cart {
+#desktop-cart {
     height: 40%;
     margin-left: 20px;
 } /*FIX this shopping cart */
@@ -190,37 +190,32 @@ footer {
 
     /* Home Page */
         /* Navigation */
-        nav {
-            background-color: #cfe8e8;
-            padding: 10px;
-            box-shadow: 0 6px 5px -5px #3b656c;
+        nav {padding: 5px;}
+        .mobile-link {
+            display: block;
         }
 
         .fullnav {display:none;}
         #mobilenav {
             display: flex;
+            justify-content: space-between;
         }
         .homeheader {
             padding: none;
             margin: none;}
-        #smallnav {
-            display: grid;
+        #mobile-link-group {
             margin: 10px;
             }
         .smalllogo {
-            width: 10%;
-            }
-        .smallcart {
-            float: right;
             width: 20%;
-
+            margin: auto;
+            }
+        #mobile-cart {
+            margin: auto;
+            width: 70%;
         }
-        
-        #companyname {
-            font-family: "Fjalla One";
-            font-size: 2em;
-            margin-left: 20px;}
-        .smalllocation {     
+    
+        #smalllocation {     
             border-radius: 10px;
             border: none;
             color:#FFF5CB;
