@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Box Model</title>
+    <style>
+        #box0 {padding: 0px; background-color: rgb(234, 187, 55);}
+        #wrappedimage {float: right;}
+        #container {display: flex;}
+        #box1 {padding: 20px; background-color: rgb(234, 187, 55);}
+        #box2 {margin: 0px 20px 0px 20px; background-color: rgb(234, 187, 55);}
+        .next {background-color: rgb(102, 171, 203);}
+        #box3 {background-color: rgb(234, 187, 55);;}
+        .box {width: 100px;}
+
+    </style>
+</head>
+<body>
+    <div id="box0" class="box"><p>This box has no padding.</p></div>
+    <div id="box1" class="box"><p>This box has padding.</p></div>
+    <div id="container">
+        <div class="next" id="box">This box is affected by the margin.</div>
+        <div id="box2"><p>This box has a margin.</p></div>
+        <div class="next"id="box">This box is affected by the margin.</div>
+    </div>
+    <div id="container">
+        <div class="next" id="box">This box is next to the box without a margin.</div>
+        <div id="box3"><p>This box has no margin.</p></div>
+        <div class="next"id="box">This box is next to the box without a margin.</div>
+    </div>
+</body>
+</html>
