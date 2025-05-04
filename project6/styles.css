@@ -136,7 +136,7 @@ footer {
     display:flex;
     flex: wrap;
     margin: 0px 100px 40px 100px;}
-.promotionstyle {
+#promotionstyle {
     border-radius: 20px;
     box-shadow: 0 6px 5px -5px #3b656c
 }
@@ -191,6 +191,7 @@ footer {
 }
 
 .ingredientbutton {
+    align-items: center;
     display: flex;
     justify-content: space-between;
     text-align: center;
@@ -204,7 +205,14 @@ footer {
 .ingredientname {
     margin-left: 20px;
     margin-right: 20px;
+    display: inline-block;
 }
+.plusminus {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
 .ingredientheading {text-align:center;}
 .ingredientsection {
     margin: 20px;
@@ -423,7 +431,7 @@ select {margin-bottom: 20px;}
                 margin: auto;
             }
             
-            span {display: none;}
+            #break {display: none;}
             #bannerheader {
 
                 text-align: left;
@@ -466,6 +474,8 @@ select {margin-bottom: 20px;}
             margin-bottom: 100px;}
         .shadowbox {display: none;}
         #redeem {
+            float: left;}
+        #redeem2 {
             float: left;}
         
         /* Gallery */

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Test</title>
+    <style>
+        .ingredientbutton {
+    display: flex;
+    align-items: center; /* aligns items vertically */
+    justify-content: space-between;
+    text-align: center;
+    margin-bottom: 10px;
+    background-color: #1E5809;
+    color: #FFF5CB;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.ingredientname {
+    margin: 0 20px;
+    display: inline-block;
+}
+
+.plusminus {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+    </style>
+</head>
+<body>
+    <div class="ingredientbutton">
+        <i class="fa-solid fa-bread-slice"></i>
+        <span class="ingredientname">Italian</span>
+        <div class="plusminus">
+            <i class="fa-solid fa-circle-plus" onclick="foodOn(this);"></i>
+            <i class="fa-solid fa-circle-minus" onclick="foodOff(this);"></i>
+        </div>
+    </div>
+</body>
+</html>
