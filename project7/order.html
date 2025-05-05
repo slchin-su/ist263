@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crafted Cravings|Make-Your-Own-Sandwich</title>
+    <title>Crafted Cravings | Make-Your-Own-Sandwich</title>
     <link rel="stylesheet" href="styles.css">
     <script src="project.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet">
@@ -65,7 +65,7 @@
             </div>
             <div class="ingredientbutton">
                 <i class="fa-solid fa-bread-slice"></i>
-                <label class="ingredientname">Pita</label>
+                <span class="ingredientname">Pita</span>
                 <div class="plusminus">
                     <i class="fa-solid fa-circle-plus" onclick="foodOn(this);"></i>
                     <i class="fa-solid fa-circle-minus" onclick="foodOff(this);"></i>
@@ -73,16 +73,7 @@
             </div>
             <div class="ingredientbutton">
                 <i class="fa-solid fa-bread-slice"></i>
-                <label class="ingredientname">Rye</label>
-                <div class="plusminus">
-                    <i class="fa-solid fa-circle-plus" onclick="foodOn(this);"></i>
-                    <i class="fa-solid fa-circle-minus" onclick="foodOff(this);"></i>
-                </div>
-            </div>
-    
-            <div class="ingredientbutton">
-                <i class="fa-solid fa-bread-slice"></i>
-                <label class="ingredientname">Sourdough</label>
+                <span class="ingredientname">Rye</span>
                 <div class="plusminus">
                     <i class="fa-solid fa-circle-plus" onclick="foodOn(this);"></i>
                     <i class="fa-solid fa-circle-minus" onclick="foodOff(this);"></i>
@@ -91,7 +82,16 @@
     
             <div class="ingredientbutton">
                 <i class="fa-solid fa-bread-slice"></i>
-                <label class="ingredientname">Whole Grain</label>
+                <span class="ingredientname">Sourdough</span>
+                <div class="plusminus">
+                    <i class="fa-solid fa-circle-plus" onclick="foodOn(this);"></i>
+                    <i class="fa-solid fa-circle-minus" onclick="foodOff(this);"></i>
+                </div>
+            </div>
+    
+            <div class="ingredientbutton">
+                <i class="fa-solid fa-bread-slice"></i>
+                <span class="ingredientname">Whole Grain</span>
                 <div class="plusminus">
                     <i class="fa-solid fa-circle-plus" onclick="foodOn(this);"></i>
                     <i class="fa-solid fa-circle-minus" onclick="foodOff(this);"></i>
@@ -100,7 +100,7 @@
      
             <div class="ingredientbutton">
                 <i class="fa-solid fa-bread-slice"></i>
-                <label class="ingredientname">White</label>
+                <span class="ingredientname">White</span>
                 <div class="plusminus">
                     <i class="fa-solid fa-circle-plus" onclick="foodOn(this);"></i>
                     <i class="fa-solid fa-circle-minus" onclick="foodOff(this);"></i>
@@ -111,7 +111,7 @@
             <h2 class="ingredientheading">Meat</h2>
             <div class="ingredientbutton">
                 <i class="fa-solid fa-drumstick-bite"></i>
-                <label class="ingredientname">Beef</label>
+                <span class="ingredientname">Beef</span>
                 <div class="plusminus">
                     <i class="fa-solid fa-circle-plus" onclick="foodOn(this);"></i>
                     <i class="fa-solid fa-circle-minus" onclick="foodOff(this);"></i>
@@ -119,7 +119,7 @@
             </div>
             <div class="ingredientbutton">
                 <i class="fa-solid fa-drumstick-bite"></i>
-                <label class="ingredientname">Chicken</label>
+                <span class="ingredientname">Chicken</span>
                 <div class="plusminus">
                     <i class="fa-solid fa-circle-plus" onclick="foodOn(this);"></i>
                     <i class="fa-solid fa-circle-minus" onclick="foodOff(this);"></i>
@@ -127,7 +127,7 @@
             </div>
             <div class="ingredientbutton">
                 <i class="fa-solid fa-drumstick-bite"></i>
-                <label class="ingredientname">Ham</label>
+                <span class="ingredientname">Ham</span>
                 <div class="plusminus">
                     <i class="fa-solid fa-circle-plus" onclick="foodOn(this);"></i>
                     <i class="fa-solid fa-circle-minus" onclick="foodOff(this);"></i>
@@ -135,7 +135,7 @@
             </div>
             <div class="ingredientbutton">
                 <i class="fa-solid fa-drumstick-bite"></i>
-                <label class="ingredientname">Pork</label>
+                <span class="ingredientname">Pork</span>
                 <div class="plusminus">
                     <i class="fa-solid fa-circle-plus" onclick="foodOn(this);"></i>
                     <i class="fa-solid fa-circle-minus" onclick="foodOff(this);"></i>
@@ -143,7 +143,7 @@
             </div>
             <div class="ingredientbutton">
                 <i class="fa-solid fa-drumstick-bite"></i>
-                <label class="ingredientname">Turkey</label>
+                <span class="ingredientname">Turkey</span>
                 <div class="plusminus">
                     <i class="fa-solid fa-circle-plus" onclick="foodOn(this);"></i>
                     <i class="fa-solid fa-circle-minus" onclick="foodOff(this);"></i>
@@ -154,7 +154,7 @@
             <h2 class="ingredientheading">Cheese</h2>
             <div class="ingredientbutton">
                 <i class="fa-solid fa-cheese"></i>
-                <label class="ingredientname">American</label>
+                <span class="ingredientname">American</span>
                 <div class="plusminus">
                     <i class="fa-solid fa-circle-plus" onclick="foodOn(this);"></i>
                     <i class="fa-solid fa-circle-minus" onclick="foodOff(this);"></i>
@@ -162,7 +162,7 @@
             </div>
             <div class="ingredientbutton">
                 <i class="fa-solid fa-cheese"></i>
-                <label class="ingredientname">Cheddar</label>
+                <span class="ingredientname">Cheddar</span>
                 <div class="plusminus">
                     <i class="fa-solid fa-circle-plus" onclick="foodOn(this);"></i>
                     <i class="fa-solid fa-circle-minus" onclick="foodOff(this);"></i>
@@ -170,7 +170,7 @@
             </div>
             <div class="ingredientbutton">
                 <i class="fa-solid fa-cheese"></i>
-                <label class="ingredientname">Mozzarella</label>
+                <span class="ingredientname">Mozzarella</span>
                 <div class="plusminus">
                     <i class="fa-solid fa-circle-plus" onclick="foodOn(this);"></i>
                     <i class="fa-solid fa-circle-minus" onclick="foodOff(this);"></i>
@@ -178,7 +178,7 @@
             </div>
             <div class="ingredientbutton">
                 <i class="fa-solid fa-cheese"></i>
-                <label class="ingredientname">Provolone</label>
+                <span class="ingredientname">Provolone</span>
                 <div class="plusminus">
                     <i class="fa-solid fa-circle-plus" onclick="foodOn(this);"></i>
                     <i class="fa-solid fa-circle-minus" onclick="foodOff(this);"></i>
@@ -186,7 +186,7 @@
             </div>
             <div class="ingredientbutton">
                 <i class="fa-solid fa-cheese"></i>
-                <label class="ingredientname">Swiss</label>
+                <span class="ingredientname">Swiss</span>
                 <div class="plusminus">
                     <i class="fa-solid fa-circle-plus" onclick="foodOn(this);"></i>
                     <i class="fa-solid fa-circle-minus" onclick="foodOff(this);"></i>
@@ -198,7 +198,7 @@
             <p><i>$0.10/item</i></p>
             <div class="ingredientbutton">
                 <i class="fa-solid fa-leaf"></i>
-                <label class="ingredientname">Avocado</label>
+                <span class="ingredientname">Avocado</span>
                 <div class="plusminus">
                     <i class="fa-solid fa-circle-plus" onclick="foodOn(this);"></i>
                     <i class="fa-solid fa-circle-minus" onclick="foodOff(this);"></i>
@@ -206,7 +206,7 @@
             </div>
             <div class="ingredientbutton">
                 <i class="fa-solid fa-leaf"></i>
-                <label class="ingredientname">Lettuce</label>
+                <span class="ingredientname">Lettuce</span>
                 <div class="plusminus">
                     <i class="fa-solid fa-circle-plus" onclick="foodOn(this);"></i>
                     <i class="fa-solid fa-circle-minus" onclick="foodOff(this);"></i>
@@ -214,7 +214,7 @@
             </div>
             <div class="ingredientbutton">
                 <i class="fa-solid fa-leaf"></i>
-                <label class="ingredientname">Olives</label>
+                <span class="ingredientname">Olives</span>
                 <div class="plusminus">
                     <i class="fa-solid fa-circle-plus" onclick="foodOn(this);"></i>
                     <i class="fa-solid fa-circle-minus" onclick="foodOff(this);"></i>
@@ -222,7 +222,7 @@
             </div>
             <div class="ingredientbutton">
                 <i class="fa-solid fa-leaf"></i>
-                <label class="ingredientname">Onions</label>
+                <span class="ingredientname">Onions</span>
                 <div class="plusminus">
                     <i class="fa-solid fa-circle-plus" onclick="foodOn(this);"></i>
                     <i class="fa-solid fa-circle-minus" onclick="foodOff(this);"></i>
@@ -230,7 +230,7 @@
             </div>
             <div class="ingredientbutton">
                 <i class="fa-solid fa-leaf"></i>
-                <label class="ingredientname">Pickles</label>
+                <span class="ingredientname">Pickles</span>
                 <div class="plusminus">
                     <i class="fa-solid fa-circle-plus" onclick="foodOn(this);"></i>
                     <i class="fa-solid fa-circle-minus" onclick="foodOff(this);"></i>
@@ -238,7 +238,7 @@
             </div>
             <div class="ingredientbutton">
                 <i class="fa-solid fa-leaf"></i>
-                <label class="ingredientname">Peppers</label>
+                <span class="ingredientname">Peppers</span>
                 <div class="plusminus">
                     <i class="fa-solid fa-circle-plus" onclick="foodOn(this);"></i>
                     <i class="fa-solid fa-circle-minus" onclick="foodOff(this);"></i>
@@ -246,7 +246,7 @@
             </div>
             <div class="ingredientbutton">
                 <i class="fa-solid fa-leaf"></i>
-                <label class="ingredientname">Tomatoes</label>
+                <span class="ingredientname">Tomatoes</span>
                 <div class="plusminus">
                     <i class="fa-solid fa-circle-plus" onclick="foodOn(this);"></i>
                     <i class="fa-solid fa-circle-minus" onclick="foodOff(this);"></i>
@@ -258,7 +258,7 @@
             <p><i>$0.05/item</i></p>
             <div class="ingredientbutton">
                 <i class="fa-solid fa-droplet"></i>
-                <label class="ingredientname">Honey Mustard</label>
+                <span class="ingredientname">Honey Mustard</span>
                 <div class="plusminus">
                     <i class="fa-solid fa-circle-plus" onclick="foodOn(this);"></i>
                     <i class="fa-solid fa-circle-minus" onclick="foodOff(this);"></i>
@@ -266,7 +266,7 @@
             </div>
             <div class="ingredientbutton">
                 <i class="fa-solid fa-droplet"></i>
-                <label class="ingredientname">Ketchup</label>
+                <span class="ingredientname">Ketchup</span>
                 <div class="plusminus">
                     <i class="fa-solid fa-circle-plus" onclick="foodOn(this);"></i>
                     <i class="fa-solid fa-circle-minus" onclick="foodOff(this);"></i>
@@ -274,7 +274,7 @@
             </div>
             <div class="ingredientbutton">
                 <i class="fa-solid fa-droplet"></i>
-                <label class="ingredientname">Mayonnaise</label>
+                <span class="ingredientname">Mayonnaise</span>
                 <div class="plusminus">
                     <i class="fa-solid fa-circle-plus" onclick="foodOn(this);"></i>
                     <i class="fa-solid fa-circle-minus" onclick="foodOff(this);"></i>
@@ -282,7 +282,7 @@
             </div>
             <div class="ingredientbutton">
                 <i class="fa-solid fa-droplet"></i>
-                <label class="ingredientname">Mustard</label>
+                <span class="ingredientname">Mustard</span>
                 <div class="plusminus">
                     <i class="fa-solid fa-circle-plus" onclick="foodOn(this);"></i>
                     <i class="fa-solid fa-circle-minus" onclick="foodOff(this);"></i>
@@ -290,7 +290,7 @@
             </div>
             <div class="ingredientbutton">
                 <i class="fa-solid fa-droplet"></i>
-                <label class="ingredientname">Ranch Dressing</label>
+                <span class="ingredientname">Ranch Dressing</span>
                 <div class="plusminus">
                     <i class="fa-solid fa-circle-plus" onclick="foodOn(this);"></i>
                     <i class="fa-solid fa-circle-minus" onclick="foodOff(this);"></i>
@@ -299,10 +299,10 @@
         </div>
         <div class="ingredientsection">
             <h2 class="ingredientheading">Sides</h2>
-            <p><i>$0.05/item</i></p>
+            <p><i>$4.00/item</i></p>
             <div class="ingredientbutton">
                 <i class="fa-solid fa-bowl-food"></i>
-                <label class="ingredientname">French Fries</label>
+                <span class="ingredientname">French Fries</span>
                 <div class="plusminus">
                     <i class="fa-solid fa-circle-plus" onclick="foodOn(this);"></i>
                     <i class="fa-solid fa-circle-minus" onclick="foodOff(this);"></i>
@@ -310,7 +310,7 @@
             </div>
             <div class="ingredientbutton">
                 <i class="fa-solid fa-bowl-food"></i>
-                <label class="ingredientname">Onion Rings</label>
+                <span class="ingredientname">Onion Rings</span>
                 <div class="plusminus">
                     <i class="fa-solid fa-circle-plus" onclick="foodOn(this);"></i>
                     <i class="fa-solid fa-circle-minus" onclick="foodOff(this);"></i>
@@ -318,7 +318,7 @@
             </div>
             <div class="ingredientbutton">
                 <i class="fa-solid fa-bowl-food"></i>
-                <label class="ingredientname">Potato Chips</label>
+                <span class="ingredientname">Potato Chips</span>
                 <div class="plusminus">
                     <i class="fa-solid fa-circle-plus" onclick="foodOn(this);"></i>
                     <i class="fa-solid fa-circle-minus" onclick="foodOff(this);"></i>
@@ -326,7 +326,7 @@
             </div>
             <div class="ingredientbutton">
                 <i class="fa-solid fa-bowl-food"></i>
-                <label class="ingredientname">Vegetable Chips</label>
+                <span class="ingredientname">Vegetable Chips</span>
                 <div class="plusminus">
                     <i class="fa-solid fa-circle-plus" onclick="foodOn(this);"></i>
                     <i class="fa-solid fa-circle-minus" onclick="foodOff(this);"></i>
@@ -334,7 +334,7 @@
             </div>
             <div class="ingredientbutton">
                 <i class="fa-solid fa-bowl-food"></i>
-                <label class="ingredientname">Apple Slices</label>
+                <span class="ingredientname">Apple Slices</span>
                 <div class="plusminus">
                     <i class="fa-solid fa-circle-plus" onclick="foodOn(this);"></i>
                     <i class="fa-solid fa-circle-minus" onclick="foodOff(this);"></i>

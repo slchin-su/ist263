@@ -246,7 +246,7 @@ footer {
 #orderspace {margin-bottom: 50px;}
 
 /*Order Placed Page*/
-#placedtext {
+.placedtext {
     text-align: center;
     margin: 200px 100px 200px 100px;}
 #logoanimation /*Bottom bread*/{
