@@ -215,7 +215,7 @@ footer {
     display: flex;
 }
 #mapright {
-    padding: 50px;}
+    margin: 50px;}
 #nextbutton {
     border-radius: 10px;
     border: none;
@@ -355,7 +355,7 @@ select {margin-bottom: 20px;}
 /* Phones */
 @media only screen and (max-width: 800px) {
     body {width: 100%;}
-
+    .basicmargins {margin:30px;}
     /* Home Page */
         /* Navigation */
         nav {padding: 5px;}
@@ -383,6 +383,7 @@ select {margin-bottom: 20px;}
             width: 70%;
             float: right;
         }
+        #break {display: none;}
         
         #smalllocation {     
             border-radius: 10px;
@@ -422,10 +423,7 @@ select {margin-bottom: 20px;}
                 float: none;
                 margin: auto;
             }
-            
-            span {display: none;}
             #bannerheader {
-
                 text-align: left;
                 font-size: 2em;
                 margin: 0px 0px 20px 0px;}
@@ -502,11 +500,84 @@ select {margin-bottom: 20px;}
             display: block; }
 
         /* Order Page */
-            #allingredients {
-                display: grid;
-                grid-template-columns: 45% 45%;
-                margin-bottom: 10px;
-            }
+
+        #sandwichgrid {
+            display: block;}
+     
+        #allingredients {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .ingredientsection {
+            margin: 5px;
+        }
+        /* Checkout Page */
+
+    #checkoutcard {
+        margin: auto;
+        width: auto;
+        background-color: white;
+        padding: 30px 20px 40px 70px;
+        border-radius: 20px;
+        box-shadow: 3px 3px 3px;
+    }
+        /*About Page*/
+    #aboutparagraph {
+        margin: auto;
+        margin-bottom: 20px;
+}
+    /* Map Page */
+    #location{
+        display: block;
+        margin: auto;
+        padding: auto;
+    }
+    #mapright {
+        padding: auto;}
+    #map {width: auto;}
+
+/* Shopping Cart Page */
+    .cartmargins {
+        margin: 30px;
+        width: auto;
+        background-color: white;
+        padding: 50px;
+        border-radius: 20px;
+        box-shadow: 3px 3px 3px
+    }
+/* Order Placed Page */
+
+  @keyframes bottombread {
+    0%   { top: 60px; }
+    100% { top: 200px;}
+  }
+
+    @keyframes lettuce {
+        0%   { top: 60px; }
+        100% { top: 200px; opacity: 1;}
+        }
+
+    @keyframes tomato {
+        0%   { top: 60px; opacity: 0; }
+        100% { top: 200px; opacity: 1;}
+        }
+
+
+    @keyframes topbread {
+        0%   { top: 60px; opacity: 0; }
+        100% { top: 200px; opacity: 1;}
+        }
+
+    @keyframes toothpick {
+        0%   { top: 60px; opacity: 0; }
+        100% { top: 200px; opacity: 1;}
+        }
+
+    @keyframes olive {
+        0%   { top: 60px; opacity: 0; }
+        100% { top: 200px; opacity: 1;}
+        }
 }
 
 /* JavaScript */
