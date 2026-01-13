@@ -1,0 +1,501 @@
+<!doctype html>
+<html lang="en" class="h-full">
+ <head>
+  <meta charset="UTF-8">
+  <title>Syracuse Biking Tracker</title><!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script><!-- Canva SDKs -->
+  <script src="/_sdk/element_sdk.js"></script>
+  <style>
+    body {
+      box-sizing: border-box;
+    }
+  </style>
+  <style>@view-transition { navigation: auto; }</style>
+  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+ </head>
+ <body class="h-full w-full">
+  <div id="app-root" class="app-wrapper h-full w-full overflow-auto bg-[#030616] text-white">
+   <header class="w-full border-b border-white/10 bg-[#030616]/80 backdrop-blur-sm">
+    <div class="max-w-5xl mx-auto px-4 py-4 flex items-center justify-between gap-4">
+     <div class="flex items-center gap-3"><!-- Simple bike logo -->
+      <div class="w-10 h-10 rounded-full bg-[#14B8A6] flex items-center justify-center">
+       <svg viewbox="0 0 48 48" aria-hidden="true" class="w-6 h-6 text-[#030616]"><circle cx="14" cy="32" r="6" fill="none" stroke="currentColor" stroke-width="2.5"></circle> <circle cx="34" cy="32" r="6" fill="none" stroke="currentColor" stroke-width="2.5"></circle> <path d="M16 20h8l3 8h-6" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M24 16h6" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"></path> <path d="M18 20l-4 12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"></path>
+       </svg>
+      </div>
+      <div>
+       <h1 id="app-title" class="text-xl font-semibold tracking-tight">Community Biking Tracker</h1>
+       <p id="app-subtitle" class="text-xs text-white/60">Track your rides and celebrate progress</p>
+      </div>
+     </div>
+     <div class="flex items-center gap-3"><button id="primary-cta" type="button" class="inline-flex items-center gap-2 rounded-full bg-[#14B8A6] px-4 py-2 text-sm font-semibold text-[#030616] shadow-md shadow-[#14B8A6]/40 hover:bg-[#22D3C5] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#14B8A6] focus-visible:ring-offset-[#030616] transition-colors"> <span class="inline-block w-2 h-2 rounded-full bg-[#030616] animate-pulse"></span> Start Ride </button> <!-- Simple avatar -->
+      <div class="w-9 h-9 rounded-full bg-gradient-to-tr from-[#14B8A6] to-[#1D4ED8] flex items-center justify-center text-sm font-semibold">
+       CJ
+      </div>
+     </div>
+    </div>
+   </header>
+   <main class="w-full">
+    <div class="max-w-5xl mx-auto px-4 py-5 flex flex-col lg:flex-row gap-5"><!-- Left column: stats and today's ride -->
+     <section class="w-full lg:w-2/3 flex flex-col gap-5" aria-label="Your biking progress"><!-- Progress summary cards -->
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4"><!-- Total distance -->
+       <article class="rounded-2xl bg-[#020617] border border-white/10 p-4 flex flex-col justify-between">
+        <div class="flex items-center justify-between mb-3">
+         <div class="flex items-center gap-2">
+          <div class="w-8 h-8 rounded-full bg-[#1D4ED8]/20 flex items-center justify-center">
+           <svg viewbox="0 0 32 32" aria-hidden="true" class="w-4 h-4 text-[#60A5FA]"><path d="M6 24l7-14 5 8 4-7 4 13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+           </svg>
+          </div>
+          <h2 class="text-xs font-medium text-white/70 uppercase tracking-[0.08em]">Total Distance</h2>
+         </div><span class="text-[0.7rem] text-[#14B8A6] bg-[#14B8A6]/10 px-2 py-0.5 rounded-full"> Lifetime </span>
+        </div>
+        <p class="text-2xl font-semibold leading-none mb-1">1,248<span class="text-base font-normal text-white/60 ml-1">km</span></p>
+        <p class="text-xs text-white/50">Top month: <span class="text-white/80">June · 186 km</span></p>
+       </article><!-- This week -->
+       <article class="rounded-2xl bg-[#020617] border border-white/10 p-4 flex flex-col justify-between">
+        <div class="flex items-center justify-between mb-3">
+         <div class="flex items-center gap-2">
+          <div class="w-8 h-8 rounded-full bg-[#14B8A6]/20 flex items-center justify-center">
+           <svg viewbox="0 0 32 32" aria-hidden="true" class="w-4 h-4 text-[#14B8A6]"><circle cx="16" cy="16" r="10" fill="none" stroke="currentColor" stroke-width="2"></circle> <path d="M16 10v6l3 3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+           </svg>
+          </div>
+          <h2 class="text-xs font-medium text-white/70 uppercase tracking-[0.08em]">This Week</h2>
+         </div><span class="text-[0.7rem] text-white/70"> 4 of 5 rides </span>
+        </div>
+        <p class="text-2xl font-semibold leading-none mb-1">56<span class="text-base font-normal text-white/60 ml-1">km</span></p>
+        <div class="mt-2">
+         <div class="h-1.5 w-full rounded-full bg-white/10 overflow-hidden">
+          <div class="h-full w-3/4 bg-gradient-to-r from-[#14B8A6] to-[#60A5FA] rounded-full"></div>
+         </div>
+         <p class="text-[0.68rem] text-white/50 mt-1">75% of weekly distance goal</p>
+        </div>
+       </article><!-- Streak -->
+       <article class="rounded-2xl bg-[#020617] border border-white/10 p-4 flex flex-col justify-between">
+        <div class="flex items-center justify-between mb-3">
+         <div class="flex items-center gap-2">
+          <div class="w-8 h-8 rounded-full bg-[#1D4ED8]/20 flex items-center justify-center">
+           <svg viewbox="0 0 32 32" aria-hidden="true" class="w-4 h-4 text-[#60A5FA]"><path d="M10 22c0-3 2-5 2-8 0-2-1-4-1-6 0-3 2-5 5-6-1 2-1 4 0 6 1 2 3 3 3 6 0 3-2 5-2 8 0 2 1 4 1 4s-2-1-4-1-4 1-4 1 1-2 1-4z" fill="currentColor"></path>
+           </svg>
+          </div>
+          <h2 class="text-xs font-medium text-white/70 uppercase tracking-[0.08em]">Riding Streak</h2>
+         </div><span class="text-[0.7rem] text-[#FACC15]"> On fire </span>
+        </div>
+        <p class="text-2xl font-semibold leading-none mb-1">12<span class="text-base font-normal text-white/60 ml-1">days</span></p>
+        <p class="text-xs text-white/50">Longest streak: <span class="text-white/80">21 days</span></p>
+       </article>
+      </div><!-- Today's ride + simple chart -->
+      <section class="rounded-2xl bg-[#020617] border border-white/10 p-4 sm:p-5">
+       <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mb-4">
+        <div>
+         <h2 id="today-title" class="text-sm font-semibold text-white">Today’s Ride</h2>
+         <p class="text-xs text-white/50">Quick snapshot of your latest session</p>
+        </div>
+        <div class="flex items-center gap-2"><button type="button" class="rounded-full border border-white/15 px-3 py-1.5 text-[0.7rem] text-white/80 hover:bg-white/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#14B8A6] focus-visible:ring-offset-[#020617]" data-range="week"> Week </button> <button type="button" class="rounded-full border border-[#14B8A6] bg-[#14B8A6]/10 px-3 py-1.5 text-[0.7rem] text-[#14B8A6] font-medium hover:bg-[#14B8A6]/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#14B8A6] focus-visible:ring-offset-[#020617]" data-range="month"> Month </button>
+        </div>
+       </div>
+       <div class="grid grid-cols-1 md:grid-cols-5 gap-4 md:gap-5 items-start"><!-- Numbers -->
+        <div class="md:col-span-2 flex flex-col gap-3">
+         <div class="grid grid-cols-3 gap-3">
+          <div class="rounded-xl bg-white/5 px-3 py-3">
+           <p class="text-[0.65rem] uppercase tracking-[0.08em] text-white/60">Distance</p>
+           <p class="mt-1 text-lg font-semibold">18.4<span class="text-xs font-normal text-white/60 ml-0.5">km</span></p>
+          </div>
+          <div class="rounded-xl bg-white/5 px-3 py-3">
+           <p class="text-[0.65rem] uppercase tracking-[0.08em] text-white/60">Time</p>
+           <p class="mt-1 text-lg font-semibold">42<span class="text-xs font-normal text-white/60 ml-0.5">min</span></p>
+          </div>
+          <div class="rounded-xl bg-white/5 px-3 py-3">
+           <p class="text-[0.65rem] uppercase tracking-[0.08em] text-white/60">Avg Speed</p>
+           <p class="mt-1 text-lg font-semibold">26<span class="text-xs font-normal text-white/60 ml-0.5">km/h</span></p>
+          </div>
+         </div>
+         <div class="rounded-xl bg-white/5 px-3 py-3 flex items-center justify-between gap-3">
+          <div>
+           <p class="text-[0.65rem] uppercase tracking-[0.08em] text-white/60">Elevation Gain</p>
+           <p class="mt-1 text-lg font-semibold">312<span class="text-xs font-normal text-white/60 ml-0.5">m</span></p>
+           <p class="text-[0.7rem] text-white/60 mt-1">That’s like climbing a 100‑story building.</p>
+          </div>
+          <div class="hidden sm:flex flex-col items-center gap-1">
+           <div class="w-8 h-8 rounded-full bg-[#14B8A6]/15 flex items-center justify-center">
+            <svg viewbox="0 0 32 32" aria-hidden="true" class="w-4 h-4 text-[#14B8A6]"><path d="M4 20l7-8 6 6 7-10 4 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+           </div>
+           <p class="text-[0.65rem] text-white/60">Hilly route</p>
+          </div>
+         </div>
+        </div><!-- Simple bar chart style visualization -->
+        <div class="md:col-span-3 rounded-xl bg-white/5 px-3 py-3 flex flex-col justify-between">
+         <div class="flex items-center justify-between mb-2">
+          <p class="text-[0.7rem] text-white/70">Distance per day</p>
+          <p class="text-[0.65rem] text-white/50">This week</p>
+         </div>
+         <div class="flex items-end gap-1.5 h-32"><!-- Very simple “chart” using divs -->
+          <div class="flex-1 flex flex-col items-center gap-1">
+           <div class="w-full rounded-full bg-white/10 h-full flex items-end">
+            <div class="w-full rounded-full bg-gradient-to-t from-[#14B8A6] to-[#22D3C5]" style="height: 45%;"></div>
+           </div><span class="text-[0.6rem] text-white/50 mt-0.5">Mon</span>
+          </div>
+          <div class="flex-1 flex flex-col items-center gap-1">
+           <div class="w-full rounded-full bg-white/10 h-full flex items-end">
+            <div class="w-full rounded-full bg-gradient-to-t from-[#14B8A6] to-[#22D3C5]" style="height: 70%;"></div>
+           </div><span class="text-[0.6rem] text-white/50 mt-0.5">Tue</span>
+          </div>
+          <div class="flex-1 flex flex-col items-center gap-1">
+           <div class="w-full rounded-full bg-white/10 h-full flex items-end">
+            <div class="w-full rounded-full bg-gradient-to-t from-[#14B8A6] to-[#22D3C5]" style="height: 35%;"></div>
+           </div><span class="text-[0.6rem] text-white/50 mt-0.5">Wed</span>
+          </div>
+          <div class="flex-1 flex flex-col items-center gap-1">
+           <div class="w-full rounded-full bg-white/10 h-full flex items-end">
+            <div class="w-full rounded-full bg-gradient-to-t from-[#14B8A6] to-[#22D3C5]" style="height: 90%;"></div>
+           </div><span class="text-[0.6rem] text-white/50 mt-0.5">Thu</span>
+          </div>
+          <div class="flex-1 flex flex-col items-center gap-1">
+           <div class="w-full rounded-full bg-white/10 h-full flex items-end">
+            <div class="w-full rounded-full bg-gradient-to-t from-[#14B8A6] to-[#22D3C5]" style="height: 65%;"></div>
+           </div><span class="text-[0.6rem] text-white/50 mt-0.5">Fri</span>
+          </div>
+          <div class="flex-1 flex flex-col items-center gap-1">
+           <div class="w-full rounded-full bg-white/10 h-full flex items-end">
+            <div class="w-full rounded-full bg-gradient-to-t from-[#14B8A6] to-[#22D3C5]" style="height: 30%;"></div>
+           </div><span class="text-[0.6rem] text-white/50 mt-0.5">Sat</span>
+          </div>
+          <div class="flex-1 flex flex-col items-center gap-1">
+           <div class="w-full rounded-full bg-white/10 h-full flex items-end">
+            <div class="w-full rounded-full bg-gradient-to-t from-[#14B8A6] to-[#22D3C5]" style="height: 0%;"></div>
+           </div><span class="text-[0.6rem] text-white/50 mt-0.5">Sun</span>
+          </div>
+         </div>
+         <p class="text-[0.68rem] text-white/55 mt-3">Tip: Aim for 3 medium rides or 2 long rides a week to keep your streak going.</p>
+        </div>
+       </div>
+      </section>
+     </section><!-- Right column: community + goals -->
+     <aside class="w-full lg:w-1/3 flex flex-col gap-5" aria-label="Community and goals"><!-- Community feed -->
+      <section class="rounded-2xl bg-[#020617] border border-white/10 p-4 sm:p-5">
+       <div class="flex items-center justify-between mb-3">
+        <h2 id="community-title" class="text-sm font-semibold text-white">Community Feed</h2><span class="text-[0.7rem] text-white/60"> 3 friends riding today </span>
+       </div>
+       <div class="space-y-3.5"><!-- Post 1 -->
+        <article class="flex items-start gap-3">
+         <div class="w-8 h-8 rounded-full bg-[#1D4ED8]/30 flex items-center justify-center text-[0.65rem] font-semibold">
+          AL
+         </div>
+         <div class="flex-1">
+          <div class="flex items-center justify-between gap-2">
+           <p class="text-xs font-medium text-white">Alex Lopez</p><span class="text-[0.6rem] text-white/50"> 12 min ago </span>
+          </div>
+          <p class="text-[0.7rem] text-white/80 mt-0.5">Crushed a sunrise ride along the river. 24 km in 55 minutes – new personal best!</p>
+          <p class="text-[0.65rem] text-[#14B8A6] mt-0.5">+ 180 m elevation · Tempo ride</p>
+         </div>
+        </article><!-- Post 2 -->
+        <article class="flex items-start gap-3">
+         <div class="w-8 h-8 rounded-full bg-[#14B8A6]/30 flex items-center justify-center text-[0.65rem] font-semibold">
+          MJ
+         </div>
+         <div class="flex-1">
+          <div class="flex items-center justify-between gap-2">
+           <p class="text-xs font-medium text-white">Maya Johnson</p><span class="text-[0.6rem] text-white/50"> 47 min ago </span>
+          </div>
+          <p class="text-[0.7rem] text-white/80 mt-0.5">Joined the “Commute Crew” challenge. Logged 3 days of bike‑to‑work so far this week.</p>
+          <p class="text-[0.65rem] text-white/55 mt-0.5">Goal: 10 days this month</p>
+         </div>
+        </article><!-- Post 3 -->
+        <article class="flex items-start gap-3">
+         <div class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center text-[0.65rem] font-semibold">
+          RT
+         </div>
+         <div class="flex-1">
+          <div class="flex items-center justify-between gap-2">
+           <p class="text-xs font-medium text-white">River Trail Group</p><span class="text-[0.6rem] text-white/50"> Today · 6:00 PM </span>
+          </div>
+          <p class="text-[0.7rem] text-white/80 mt-0.5">Group ride tonight! 20–25 km at conversational pace. Meet at City Park fountain.</p>
+          <p class="text-[0.65rem] text-[#60A5FA] mt-0.5">12 riders · 4 spots left</p>
+         </div>
+        </article>
+       </div>
+      </section><!-- Goals -->
+      <section class="rounded-2xl bg-[#020617] border border-white/10 p-4 sm:p-5">
+       <div class="flex items-center justify-between mb-3">
+        <h2 id="goals-title" class="text-sm font-semibold text-white">Your Goals</h2><button type="button" class="text-[0.7rem] text-white/70 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#14B8A6] focus-visible:ring-offset-[#020617] rounded-full px-2 py-1"> Edit </button>
+       </div>
+       <ul class="space-y-2.5">
+        <li class="flex items-center gap-3">
+         <div class="w-8 h-8 rounded-full bg-[#14B8A6]/15 flex items-center justify-center">
+          <div class="w-4 h-4 rounded-full border border-[#14B8A6] flex items-center justify-center">
+           <div class="w-2.5 h-2.5 rounded-full bg-[#14B8A6]"></div>
+          </div>
+         </div>
+         <div class="flex-1">
+          <div class="flex items-center justify-between gap-2">
+           <p class="text-xs font-medium text-white">150 km in 30 days</p><span class="text-[0.65rem] text-white/55"> 62% complete </span>
+          </div>
+          <div class="mt-1 h-1.5 rounded-full bg-white/10 overflow-hidden">
+           <div class="h-full w-3/5 bg-[#14B8A6] rounded-full"></div>
+          </div>
+         </div></li>
+        <li class="flex items-center gap-3">
+         <div class="w-8 h-8 rounded-full bg-[#1D4ED8]/15 flex items-center justify-center">
+          <svg viewbox="0 0 32 32" aria-hidden="true" class="w-4 h-4 text-[#60A5FA]"><path d="M10 8h12l-2 8h-8z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"></path> <path d="M12 20h8l-1 4h-6z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"></path>
+          </svg>
+         </div>
+         <div class="flex-1">
+          <div class="flex items-center justify-between gap-2">
+           <p class="text-xs font-medium text-white">Ride 4× per week</p><span class="text-[0.65rem] text-white/55"> 3 / 4 this week </span>
+          </div>
+          <div class="mt-1 h-1.5 rounded-full bg-white/10 overflow-hidden">
+           <div class="h-full w-3/4 bg-gradient-to-r from-[#60A5FA] to-[#14B8A6] rounded-full"></div>
+          </div>
+         </div></li>
+        <li class="flex items-center gap-3">
+         <div class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center">
+          <svg viewbox="0 0 32 32" aria-hidden="true" class="w-4 h-4 text-white/80"><path d="M9 9h14l-2 8H11z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"></path> <path d="M11 21h10v3H11z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"></path>
+          </svg>
+         </div>
+         <div class="flex-1">
+          <div class="flex items-center justify-between gap-2">
+           <p class="text-xs font-medium text-white">Join 1 group ride / week</p><span class="text-[0.65rem] text-[#14B8A6]"> On track </span>
+          </div>
+          <p class="mt-1 text-[0.68rem] text-white/55">Next: River Trail · Today 6:00 PM</p>
+         </div></li>
+       </ul>
+      </section>
+     </aside>
+    </div>
+   </main>
+   <footer class="w-full border-t border-white/10 bg-[#020617]">
+    <div class="max-w-5xl mx-auto px-4 py-3 flex flex-col sm:flex-row items-center justify-between gap-2">
+     <p class="text-[0.7rem] text-white/50">Ride safely. Obey local traffic laws. Share the lane.</p>
+     <p class="text-[0.7rem] text-white/45">Community Biking Tracker · Demo layout</p>
+    </div>
+   </footer>
+  </div>
+  <script>
+    // ----- Config + Element SDK integration -----
+    const defaultConfig = {
+      app_title: "Community Biking Tracker",
+      app_subtitle: "Track your rides and celebrate progress",
+      today_title: "Today’s Ride",
+      community_title: "Community Feed",
+      goals_title: "Your Goals",
+      primary_cta: "Start Ride",
+      background_color: "#030616",
+      surface_color: "#020617",
+      text_color: "#ffffff",
+      primary_action_color: "#14B8A6",
+      secondary_action_color: "#1D4ED8",
+      font_family: "system-ui",
+      font_size: 14
+    };
+
+    // Apply config to existing DOM
+    async function onConfigChange(config) {
+      const merged = Object.assign({}, defaultConfig, config || {});
+
+      const root = document.getElementById("app-root");
+      const appTitle = document.getElementById("app-title");
+      const appSubtitle = document.getElementById("app-subtitle");
+      const todayTitle = document.getElementById("today-title");
+      const communityTitle = document.getElementById("community-title");
+      const goalsTitle = document.getElementById("goals-title");
+      const primaryCta = document.getElementById("primary-cta");
+
+      const baseFont = merged.font_family || defaultConfig.font_family;
+      const baseStack = baseFont + ", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif";
+      const baseSize = merged.font_size || defaultConfig.font_size;
+
+      if (root) {
+        root.style.backgroundColor = merged.background_color;
+      }
+
+      // Surfaces
+      const surfaceCards = document.querySelectorAll(
+        "section.rounded-2xl, article.rounded-2xl"
+      );
+      surfaceCards.forEach(function (el) {
+        el.style.backgroundColor = merged.surface_color;
+        el.style.borderColor = "rgba(255,255,255,0.10)";
+      });
+
+      // Text elements font + color
+      const allText = document.querySelectorAll("h1, h2, p, span, button, li, label");
+      allText.forEach(function (el) {
+        el.style.fontFamily = baseStack;
+        el.style.color = merged.text_color;
+      });
+
+      // Heading sizes
+      if (appTitle) {
+        appTitle.textContent = merged.app_title || defaultConfig.app_title;
+        appTitle.style.fontSize = (baseSize * 1.8) + "px";
+      }
+      if (appSubtitle) {
+        appSubtitle.textContent = merged.app_subtitle || defaultConfig.app_subtitle;
+        appSubtitle.style.fontSize = (baseSize * 0.8) + "px";
+        appSubtitle.style.opacity = "0.75";
+      }
+      if (todayTitle) {
+        todayTitle.textContent = merged.today_title || defaultConfig.today_title;
+        todayTitle.style.fontSize = (baseSize * 1.1) + "px";
+      }
+      if (communityTitle) {
+        communityTitle.textContent = merged.community_title || defaultConfig.community_title;
+        communityTitle.style.fontSize = (baseSize * 1.1) + "px";
+      }
+      if (goalsTitle) {
+        goalsTitle.textContent = merged.goals_title || defaultConfig.goals_title;
+        goalsTitle.style.fontSize = (baseSize * 1.1) + "px";
+      }
+
+      // Primary CTA
+      if (primaryCta) {
+        primaryCta.textContent = merged.primary_cta || defaultConfig.primary_cta;
+        primaryCta.style.backgroundColor = merged.primary_action_color;
+        primaryCta.style.color = "#030616";
+        primaryCta.style.fontSize = (baseSize * 0.9) + "px";
+      }
+
+      // Other buttons / interactive text with secondary color
+      const secondaryButtons = document.querySelectorAll(
+        "button[data-range], section[aria-label='Community and goals'] button"
+      );
+      secondaryButtons.forEach(function (btn) {
+        if (btn === primaryCta) return;
+        btn.style.color = merged.secondary_action_color;
+        btn.style.borderColor = merged.secondary_action_color;
+      });
+
+      // Small text scaling
+      const smallText = document.querySelectorAll("p.text-xs, span.text-[0.6rem], span.text-[0.7rem]");
+      smallText.forEach(function (el) {
+        el.style.fontSize = (baseSize * 0.75) + "px";
+      });
+    }
+
+    // Map to capabilities: recolor, font, font size
+    function mapToCapabilities(config) {
+      const cfg = config || defaultConfig;
+
+      const backgroundColor = {
+        get: function () {
+          return cfg.background_color || defaultConfig.background_color;
+        },
+        set: function (value) {
+          if (!window.elementSdk) return;
+          window.elementSdk.setConfig({ background_color: value });
+        }
+      };
+
+      const surfaceColor = {
+        get: function () {
+          return cfg.surface_color || defaultConfig.surface_color;
+        },
+        set: function (value) {
+          if (!window.elementSdk) return;
+          window.elementSdk.setConfig({ surface_color: value });
+        }
+      };
+
+      const textColor = {
+        get: function () {
+          return cfg.text_color || defaultConfig.text_color;
+        },
+        set: function (value) {
+          if (!window.elementSdk) return;
+          window.elementSdk.setConfig({ text_color: value });
+        }
+      };
+
+      const primaryActionColor = {
+        get: function () {
+          return cfg.primary_action_color || defaultConfig.primary_action_color;
+        },
+        set: function (value) {
+          if (!window.elementSdk) return;
+          window.elementSdk.setConfig({ primary_action_color: value });
+        }
+      };
+
+      const secondaryActionColor = {
+        get: function () {
+          return cfg.secondary_action_color || defaultConfig.secondary_action_color;
+        },
+        set: function (value) {
+          if (!window.elementSdk) return;
+          window.elementSdk.setConfig({ secondary_action_color: value });
+        }
+      };
+
+      const fontEditable = {
+        get: function () {
+          return cfg.font_family || defaultConfig.font_family;
+        },
+        set: function (value) {
+          if (!window.elementSdk) return;
+          window.elementSdk.setConfig({ font_family: value });
+        }
+      };
+
+      const fontSizeable = {
+        get: function () {
+          return cfg.font_size || defaultConfig.font_size;
+        },
+        set: function (value) {
+          if (!window.elementSdk) return;
+          window.elementSdk.setConfig({ font_size: value });
+        }
+      };
+
+      return {
+        recolorables: [
+          backgroundColor,
+          surfaceColor,
+          textColor,
+          primaryActionColor,
+          secondaryActionColor
+        ],
+        borderables: [],
+        fontEditable: fontEditable,
+        fontSizeable: fontSizeable
+      };
+    }
+
+    function mapToEditPanelValues(config) {
+      const cfg = Object.assign({}, defaultConfig, config || {});
+      return new Map([
+        ["app_title", cfg.app_title],
+        ["app_subtitle", cfg.app_subtitle],
+        ["today_title", cfg.today_title],
+        ["community_title", cfg.community_title],
+        ["goals_title", cfg.goals_title],
+        ["primary_cta", cfg.primary_cta]
+      ]);
+    }
+
+    // Initialize Element SDK if available
+    if (window.elementSdk) {
+      window.elementSdk.init({
+        defaultConfig: defaultConfig,
+        onConfigChange: onConfigChange,
+        mapToCapabilities: mapToCapabilities,
+        mapToEditPanelValues: mapToEditPanelValues
+      });
+    } else {
+      // Fallback to default rendering if SDK not present
+      onConfigChange(defaultConfig);
+    }
+
+    // Simple fake interaction for range buttons (visual only)
+    (function () {
+      var rangeButtons = document.querySelectorAll("button[data-range]");
+      rangeButtons.forEach(function (btn) {
+        btn.addEventListener("click", function () {
+          rangeButtons.forEach(function (b) {
+            b.classList.remove("border-[#14B8A6]", "bg-[#14B8A6]/10", "text-[#14B8A6]", "font-medium");
+          });
+          btn.classList.add("border-[#14B8A6]", "bg-[#14B8A6]/10", "text-[#14B8A6]", "font-medium");
+        });
+      });
+    })();
+  </script>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9ac2c34b935e8ae3',t:'MTc2NTQzMjgzOS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
